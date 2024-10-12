@@ -47,6 +47,7 @@ vector<pair<int, int>> create_pair_blum(int arr_blum[]) {
 		}
 	return v;
 }
+
 int main()
 {
 	int* arr_prime = new int[N];
