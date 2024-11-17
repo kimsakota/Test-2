@@ -37,7 +37,7 @@ void create_da_thuc(Node*& node, int a[], int n) {
 }
 
 Node* sum_da_thuc(const Node* fx, const Node* gx) {
-	Node* p = NULL; // chýa xong 
+	Node* p = NULL; // chÃ½a xong 
 	while (fx != NULL && gx != NULL) {
 		
 	}
