@@ -31,18 +31,27 @@ void add_first(Node*& node, int data, int pos) {
 	}
 }
 
-void create_da_thuc(Node*& node, int a[], int n) {
-	for (int i = 0; i < n; i++) 
-		add_first(node, a[i], i);
-}
-
-Node* sum_da_thuc(const Node* fx, const Node* gx) {
-	Node* p = NULL; // chýa xong 
-	while (fx != NULL && gx != NULL) {
-		
+void add_last(Node*& node, int data, int pos) {
+	Node* p = make_node(data, pos);
+	if (is_list_empty(node))
+		node = p;
+	else {
+		Node* temp = node;
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = p;
 	}
 }
 
+void create_da_thuc(Node*& node, int a[], int n) {
+	for (int i = 0; i < n; i++)
+		add_first(node, a[i], i);
+}
+
+void sum_da_thuc(const Node* fx, const Node* gx) {
+	int count = (sizeof(fx) > sizeof(gx) ? sizeof(fx) : sizeof(gx));
+	cout << count;
+}
 void prinf(const Node* node) {
 	if (node->data < 0) cout << '-';
 	while (node != NULL) {
@@ -50,7 +59,7 @@ void prinf(const Node* node) {
 			if (node->data != 1)
 				cout << node->data;
 		}
-		if(node->data < 0) {
+		if (node->data < 0) {
 			if (node->data != -1)
 				cout << node->data * (-1);
 		}
