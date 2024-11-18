@@ -107,7 +107,7 @@ void prinf(const DT* P) {
 }
 
 int main() {
-	int f[] = { 10, 9, 0, -7, 6, 0, 4, -1, 2, -1 };
+	int f[] = { 10, 9, 0, -7, 6, 0, 4, -1, 2, -1 }; // f[i] tương ứng với hệ số của bậc x^i 
 	int g[] = { -6, 0, 4, -3, 2, 6 };
 	int nfx = sizeof(f) / sizeof(*f), ngx = sizeof(g) / sizeof(*g);
 	DT* fx = make_DT(), * gx = make_DT();
